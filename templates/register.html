@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="min-h-screen flex flex-col">
+    <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2 ">
+        <div class="bg-dark-blue px-6 py-8 rounded shadow-md text-black w-full">
+          <h1 class="mb-8 text-3xl text-center">Sign up</h1>
+          <form action="/signup" enctype="multipart/form-data" method="post">
+            <input
+                type="text"
+                class="block border bg-grey-500 border-grey-light w-full p-3 rounded mb-4"
+                name="fullname"
+                placeholder="Full Name"
+                required />
+            <input
+                type="email"
+                class="block border border-grey-light w-full p-3 rounded mb-4"
+                name="email"
+                placeholder="Email"
+                required />
+            <input
+                type="password"
+                class="block border border-grey-light w-full p-3 rounded mb-4"
+                name="password"
+                placeholder="Password"
+                required />
+            <button
+                type="submit"
+                class="w-full bg-lime-500 px-4 py-3 border border-fuchsia-300 rounded hover:bg-lime-800 focus:outline-none my-1"
+            >Create Account</button>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
