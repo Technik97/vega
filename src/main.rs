@@ -16,6 +16,7 @@ async fn main() {
     let app = Router::new()
         .route("/hello", get(root))
         .route("/", get(index))
+        .route("/sign_up", get(register))
         // .route("/styles.css", get(styles))
         .layer(Extension(tera));
         
@@ -41,4 +42,11 @@ async fn index(
     // let tera = get_tera();
     let context = Context::new();
     Html(tera.render("index.html", &context).unwrap())
+}
+
+async fn register(
+    Extension(tera): Extension<Tera>
+) -> Html<String> {
+    let context = Context::new();
+    Html(tera.render("register.html", &context).unwrap())
 }
