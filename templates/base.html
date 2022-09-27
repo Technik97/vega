@@ -13,6 +13,15 @@
         <script src="https://unpkg.com/hyperscript.org@0.9.7"></script>
     </head>
     <body>
+        <div class="flex flex-wrap border-b-2 border-pink-500">
+            <div class="w-full">
+                <nav class="relative flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-slate-900">
+                    <div class="px-3">
+                        <span class="bg-slate-900 hover:bg-slate-500 text-red-500 text-lg px-4 py-3 rounded">VEGA</span>
+                    </div>
+                </nav>
+            </div>
+        </div>     
         {% block content %}{% endblock content %}
     </body>
 </html>
